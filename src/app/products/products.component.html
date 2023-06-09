@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title p-0">Bulk Collection Entry-invoice</h5>
+        <div class="table-responsive bd-table-bx">
+            <ng-container #tableContainer>
+                <table class="table table-bordered bd-table border-primary mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cust Code</th>
+                            <th scope="col"> Cust Name</th>
+                            <th scope="col"> lnvoice No</th>
+                            <th scope="col"> lnv Date</th>
+                            <th scope="col"> Entry No</th>
+                            <th scope="col"> lnvoice Amt</th>
+                            <th scope="col"> Outstding Amt</th>
+                            <th scope="col"> Collection Amt</th>
+                            <th scope="col"> TDS</th>
+                            <th scope="col"> Cash Memo No</th>
+                            <th scope="col"> Tick</th>
+                            <th scope="col"> Remarks</th>
+                            <th scope="col"> Reasons</th>
+                            <th scope="col"> Short Call</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of tableData; let i = index">                                    
+                            <td>custcode1</td>
+                            <td>custname</td>
+                            <td>nfs.CBILLNO</td> 
+                            <td>nfs.DBILLDT</td> 
+                            <td>nfs.NENTRY_NO</td>
+                            <td>nfs.NINVAMT</td>
+                            <td>{{ row.column6 }}</td>
+                            <td><input type="number" [(ngModel)]="row.column7"></td>
+                            <td><input type="number" [(ngModel)]="row.column8" ></td>
+                            <td>nfs.CashMemoNo</td>
+                            <td><input type="checkbox" [checked]="true"></td>
+                            <td>nfs.Remarks</td>
+                            <td>nfs.Reasons</td>
+                            <td>nfs.ShortCall</td>                                                   
+                        </tr>              
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="5"  class="bold">Total Collection</th>
+                            <th scope="col">₹total | number : '.2-2'</th>
+                            <th scope="col">₹total | number : {{ getTotal() }}</th>
+                            <th scope="col">₹Colltotal | number : {{ calculateTotal() }}</th>
+                            <td class="text-right" colspan="6"></td>
+                        </tr>  
+                    </tfoot>
+                </table>
+            </ng-container>
+        </div>
+    </div>
+</div>
