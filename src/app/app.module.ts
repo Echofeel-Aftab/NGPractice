@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from './products/products.component';
 import { InputtableComponent } from './inputtable/inputtable.component';
 import { AftabBranchComponent } from './aftab-branch/aftab-branch.component';
+import { AkshayBranchComponent } from './akshay-branch/akshay-branch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     InputtableComponent,
-    AftabBranchComponent
+    AftabBranchComponent,
+    AkshayBranchComponent
   ],
   imports: [
     BrowserModule,
